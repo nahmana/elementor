@@ -1,7 +1,9 @@
+import Handler from './handler';
+
 export default class extends elementorModules.Module {
 	constructor() {
 		super();
 
-		elementorFrontend.elementsHandler.attachHandler( 'text-path', () => import( /* webpackChunkName: 'text-path' */ './handlers/text-path' ) );
+		elementorFrontend.elementsHandler.attachHandler( 'global', Handler, null );
 	}
 }

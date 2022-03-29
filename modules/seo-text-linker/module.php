@@ -21,10 +21,6 @@ class Module extends \Elementor\Core\Base\Module {
 		add_action( 'elementor/kit/register_tabs', function( Kit $kit ) {
 			$kit->register_tab( Settings_Site_Seo_Text_Linker::ID, Settings_Site_Seo_Text_Linker::class );
 		} );
-
-
-
-
 	}
 
 	/**

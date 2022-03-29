@@ -30,11 +30,6 @@ class Settings_Site_Seo_Text_Linker extends Tab_Base {
 		return 'eicon-link';
 	}
 
-// TODO: after adding docs anable.
-//	public function get_help_url() {
-//		return 'https://go.elementor.com/global-site-identity';
-//	}
-
 	protected function register_tab_controls() {
 
 		$this->start_controls_section(
@@ -108,7 +103,7 @@ class Settings_Site_Seo_Text_Linker extends Tab_Base {
 				],
 				'selectors' => [
 					'{{WRAPPER}}' => '--seo_linker_underline_exist: {{VALUE}};',
-				 ],
+				],
 				'default' => 'underline',
 				'toggle' => false,
 			]
@@ -139,7 +134,7 @@ class Settings_Site_Seo_Text_Linker extends Tab_Base {
 				],
 				'selectors' => [
 					'{{WRAPPER}}' => '--seo_linker_underline_type: {{VALUE}};',
-				 ],
+				],
 				'condition' => [
 					'seo_linker_underline_exist[value]' => 'underline',
 				],
@@ -182,15 +177,13 @@ class Settings_Site_Seo_Text_Linker extends Tab_Base {
 		);
 
 		$this->end_controls_section();
-
-		
 	}
 
 	public function on_save( $data ) {
 
-//		if ( isset( $data['settings']['site_favicon'] ) ) {
-//			update_option( 'site_icon', $data['settings']['site_favicon']['id'] );
-//		}
+	//	if ( isset( $data['settings']['site_favicon'] ) ) {
+	//		update_option( 'site_icon', $data['settings']['site_favicon']['id'] );
+	//	}
 
 	}
 }
