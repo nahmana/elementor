@@ -9,15 +9,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 class Seo_Linker {
+
 	public function register() {
 
 		add_filter( 'elementor/widget/render_content', function( $content ) {
 
+			// Get content of current (Elementor) page:
 			$kit = Plugin::$instance->kits_manager->get_active_kit_for_frontend();
 			$settings = $kit->get_settings_for_display();
 
-			// If no linker set, or first default linker is not set (no url to link), return regular content:
-			if ( ( count( $settings['seo_linker'] ) < 1 ) || ( count( $settings['seo_linker'] ) === 1 && $settings['seo_linker'][0]['link']['url'] === '' ) ) {
+			// If no linker set, or first default linker is not set (no url to link), return regular the content:
+			if ( ( count( $settings['seo_linker'] ) < 1 ) || ( count( $settings['seo_linker'] ) === 1 && '' === $settings['seo_linker'][0]['link']['url'] ) ) {
 				return $content;
 			}
 
